@@ -1,0 +1,18 @@
+$footer-font-size : ($base-font-size*0.9);
+
+.page-footer{
+    padding:30px 0;
+	background-color:$color-footer-background;
+
+    p{
+        margin-bottom:0;
+        color:$color-white;
+        font-size:$footer-font-size;
+
+        a{
+            text-decoration:underline;
+        }
+    }
+
+    a{ color:$color-grey-light; }
+}

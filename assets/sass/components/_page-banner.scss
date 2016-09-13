@@ -1,0 +1,46 @@
+.banner{
+	position:relative;
+	padding:100px 20px;
+	padding-top:150px;
+	text-align:center;
+	background-color:$color-brand-primary;
+
+	&__logo{
+		display:inline-block;
+		margin:0 0 10px 0;
+		max-width:220px;
+		height:152px;
+
+		@include respond(mobile-only){
+			height:130px;
+		}
+	}
+
+	span{
+		display:block;
+	}
+
+	&__title,
+	&__sub-title{
+		@include font-family(secondary);
+		color:$color-white;
+	}
+
+	&__title{
+		@include font-weight(bold);
+		@include font-size(47px);
+
+		@include respond(mobile-only){
+			@include font-size(40px);
+			line-height:1.1em;
+		}
+	}
+
+	&__sub-title{
+		@include font-size(30px);
+
+		@include respond(mobile-only){
+			@include font-size(24px);
+		}
+	}
+}

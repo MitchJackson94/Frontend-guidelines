@@ -1,0 +1,115 @@
+---
+layout: default
+title: Home
+slug: home
+group: "navigation"
+---
+
+{% include homepage-banner.html %}
+
+<div class="wrapper">
+	<div class="row">
+		<h1>Terminology</h1>
+		<h2>Rule declaration</h2>
+		<p>A “rule declaration” is the name given to a selector (or a group of selectors) with an accompanying group of properties. Here’s an example:</p>
+		<pre><code class="language-css">
+		.listing{
+			font-size:18px;
+			line-height:1.2;
+		}
+		</code></pre>
+
+		<h2>Selectors</h2>
+		<p>In a rule declaration, “selectors” are the bits that determine which elements in the DOM tree will be styled by the defined properties. Selectors can match HTML elements, as well as an element’s class, ID, or any of its attributes. Here are some examples of selectors:</p>
+		<pre><code class="language-css">
+		.my-element-class{
+		  /* ... */
+		}
+		 
+		[aria-hidden]{
+		  /* ... */
+		}
+		</code></pre>
+
+		<h2>Properties</h2>
+		<p>Properties are what give the selected elements of a rule declaration their style. Properties are key-value pairs, and a rule declaration can contain one or more property declarations. Property declarations look like this:</p>
+		<pre><code class="language-css">
+		/* some selector */{
+		  background:#f1f1f1;
+		  color:#333;
+		}
+		</code></pre>
+
+		<h2>Variables</h2>
+		<p>Variables should try to be used where they can this makes the whole code base extremely configurable, colours should always be a variable this means that colour schemes can be easily changed across the whole of the code variables also hold the brand colours so if the client has been updated with different brand colours they can be easily changed.</p>
+		<h2>Variable naming</h2>
+		<p>It is very important to name variables accordingly for example see the bad and good naming examples below</p>
+		<h2>Bad</h2>
+		<pre><code class="language-css">
+			$primary-color: #000000;
+		</code></pre>
+		<h2>Good</h2>
+		<pre><code class="language-css">
+			$color-brand-primary: #000000;
+		</code></pre>
+		<p>Note: colour should always be first when adding a colour based variable and be in the US selling and not the UK the CSS is in US so should the variables</p>
+	</div>
+
+	<div class="row">
+		<h1>CSS</h1>
+		<h2>Formatting</h2>
+		<ul>
+			<li>Use soft tabs (4 spaces) for indentation</li>
+			<li>Prefer dashes over camelCasing in class names. Underscores are OK if you’re using BEM (see OOCSS and BEM below).</li>
+			<li>Do not use ID selectors unless there is a valid reason.</li>
+			<li>When using multiple selectors in a rule declaration, give each selector its own line.</li>
+			<li>Put a space before the opening brace { in rule declarations</li>
+			<li>In properties, do not put a space after or before, the : character.</li>
+			<li>Put closing braces } of rule declarations on a new line</li>
+			<li>Put blank lines between rule declarations</li>
+		</ul>
+		<h2>Bad</h2>
+		<pre><code class="language-css">
+		.avatar{
+		    border-radius:50%;
+		    border:2px solid white; }
+		.no, .nope, .not_good{
+		    // ...
+		}
+		#lol-no {
+		  // ...
+		}
+		</code></pre>
+		<h2>Good</h2>
+		<pre><code class="language-css">
+		.avatar{
+		  border-radius:50%;
+		  border:2px solid white;
+		}
+		 
+		.one,
+		.selector,
+		.per-line{
+		  // ...
+		}
+		</code></pre>
+		<h2>Comments</h2>
+		<ul>
+			<li>Prefer line comments (// in Sass-land) to block comments.</li>
+			<li>Prefer comments on their own line. Avoid end-of-line comments.</li>
+			<li>Write detailed comments for code that isn’t self-documenting:</li>
+			<li>Uses of z-index</li>
+			<li>Compatibility or browser-specific hacks</li>
+			<li>Explanation of mixin used</li>
+		</ul>
+		<h2>OOCSS and BEM</h2>
+		<p>We encourage some combination of OOCSS and BEM for these reasons:</p>
+		<ul>
+			<li>It helps create clear, strict relationships between CSS and HTML</li>
+			<li>It helps us create reusable, composable components</li>
+			<li>It allows for less nesting and lower specificity</li>
+			<li>It helps in building scalable stylesheets</li>
+		</ul>
+		<p><strong>OOCSS</strong>, or “Object Oriented CSS”,</p>
+	</div>
+</div>
