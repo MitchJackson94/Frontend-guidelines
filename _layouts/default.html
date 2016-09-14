@@ -17,7 +17,10 @@
 <body class="{{page.slug}}">
     <div class="page-container">
         <div class="content-area">
-            {{content}}
+            {% include homepage-banner.html %}
+            <div class="wrapper">
+                {{ content | toc_generate }}
+            </div>
         </div>
         {% include footer.html %}
     </div>

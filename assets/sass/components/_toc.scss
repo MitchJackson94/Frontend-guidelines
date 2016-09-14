@@ -1,0 +1,69 @@
+.toc{
+    border:none;
+
+    h1{
+        margin:0 0 0.5em 0;
+        text-align:center;
+    }
+
+    a{
+        position:relative;
+        display:block;
+        color:$color-grey;
+
+        &:hover{
+            color:$color-brand-primary;
+
+            &:after{
+                border-color:$color-brand-primary;
+            }
+        }
+
+        &:after{
+            position:absolute;
+            top:50%;
+            left:0;
+            right:0;
+            content:"";
+            height:1px;
+            margin-top:-1px;
+            border-top:1px dotted $color-grey;
+            z-index:-1;
+        }
+    }
+
+    .toc_level-1 > a{
+        display:block;
+        color:$color-page-text;
+        @include font-size(20px);
+        margin:0 0 0.5em 0;
+
+        &:after{
+            display:none;
+        }
+    }
+
+    .tocnumber,
+    .toctext{
+        background-color:$color-white;
+    }
+
+    .toctext{
+        padding:0 20px 0 0;
+    }
+
+    .tocnumber{
+        float:right;
+        padding:0 0 0 20px;
+    }
+
+    th,
+    td{
+        border:none;
+    }
+
+    ul{
+        list-style:none;
+        margin:0 0 2em 0;
+    }
+}
