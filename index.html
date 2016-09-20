@@ -73,7 +73,7 @@ group: "navigation"
 	.no, .nope, .not_good{
 		// ...
 	}
-	#lol-no {
+	#lol-no{
 		// ...
 	}
 	</code></pre>
@@ -90,6 +90,33 @@ group: "navigation"
 		// ...
 	}
 	</code></pre>
+
+	<h2>Multi-line CSS</h2>
+	<p>CSS should be writing on multiple line, except in specific circumstance. There are a number of benefit to this:</p>
+	<ul>
+		<li>A reduced chance of merge conflicts, because each piece of functionality exists on its own line.</li>
+		<li>More ‘truthful’ and reliable diffs, because one line only ever carries one change.</li>
+	</ul>
+	<p>Exceptions to this rule should be fairly apparent, such as similar rulesets that only carry one declaration each, for example:</p>
+	<pre><code class="language-css">
+	.icon{
+		display:inline-block;
+		width:16px;
+		height:16px;
+		background-image:url(/img/sprite.svg);
+	}
+
+	.icon--home     { background-position:   0     0  ; }
+	.icon--person   { background-position: -16px   0  ; }
+	.icon--files    { background-position:   0   -16px; }
+	.icon--settings { background-position: -16px -16px; }
+	</code></pre>
+	<p>These types of ruleset benefit from being single-lined because</p>
+	<ul>
+		<li>they still conform to the one-reason-to-change-per-line rule;</li>
+		<li>they share enough similarities that they don’t need to be read as thoroughly as other rulesets—there is more benefit in being able to scan their selectors, which are of more interest to us in these cases.</li>
+	</ul>
+
 	<h2>Comments</h2>
 	<ul>
 		<li>Prefer line comments (// in Sass-land) to block comments.</li>
@@ -109,18 +136,17 @@ group: "navigation"
 	</ul>
 	<h2>BEM examples</h2>
 	<pre><code class="language-css">
-	.block {}
-	.block__element {}
-	.block -modifier {}
+	.block{}
+	.block__element{}
+	.block -modifier{}
 	</code></pre>
-	<p>The modifier in the BEM example is not the normal way of adding a modifier it make it a lot easier to do it this way rather than having a lot of modifiers with block in them please see example below of how to implementing this it using SASS.
+	<p>The modifier in the BEM example is not the normal way of adding a modifier however it make it a lot easier to do it this way rather than having a lot of modifiers with block in them please see example below of how to implementing this it using SASS.
 	<pre><code class="language-css">
-	.block {
+	.block{
 
-		&.-modifier {}
+		&.-modifier{}
 
-		&__element {}
+		&__element{}
 	}
 	</code></pre>
-	<p><strong>OOCSS</strong>, or “Object Oriented CSS”,</p>
 </div>
